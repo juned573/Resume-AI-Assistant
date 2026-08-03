@@ -1,6 +1,7 @@
 import os
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
+import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
@@ -8,7 +9,8 @@ from langchain_core.prompts import ChatPromptTemplate
 load_dotenv()
 
 # Read API Key
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = os.getenv("GOOGLE_API_KE" \
+"Y")
 
 if not api_key:
     try:

@@ -1,0 +1,10 @@
+services:
+  resume-ai-assistant:
+    build: .
+    container_name: resume-ai-assistant
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - .env

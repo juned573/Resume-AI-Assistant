@@ -15,9 +15,6 @@ test_rag.py
 test_retriever.py
 test_vectorstore.py
 work.py
-.dockerignore
-Dockerfile
-docker-compose.yml
 image.png
 
 
