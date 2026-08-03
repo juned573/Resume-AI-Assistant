@@ -9,8 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 load_dotenv()
 
 # Read API Key
-api_key = os.getenv("GOOGLE_API_KE" \
-"Y")
+api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key:
     try:
