@@ -11,8 +11,12 @@ load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key:
-    raise ValueError("GOOGLE_API_KEY not found in .env")
-
+    try:
+        api_key = st.secrets["GOOGLE_API_KEY"]
+    except Exception:
+        raise ValueError(
+            "GOOGLE_API_KEY not found in .env or Streamlit Secrets."
+        )
 # Initialize Gemini
 llm = ChatGoogleGenerativeAI(
     model="gemini-flash-latest",      # More stable than gemini-flash-latest
